@@ -6,13 +6,10 @@ const Skill = () => {
       <div className="row vh-100 align-items-center justify-content-center">
         <div className="row learning-journey">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum
+            Thank you for taking the time to review my portfolio. I am very
+            passionate about being a full-stack developer and I hope to have an
+            opportunity to discuss my projects in greater detail with you. Hope
+            we can have some conversation!
           </p>
         </div>
         <div className="row my-skils">

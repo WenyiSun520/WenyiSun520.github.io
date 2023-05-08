@@ -1,92 +1,200 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 const Project = () => {
+
+  const [isInteresting, setIsInteresting] = useState(false); //return true when ineraction occurs
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        //  console.log("entry.isterwectiong: " + entry.isIntersecting);
+        setIsInteresting(entry.isIntersecting);
+      },
+      {
+        rootMargin: "-300px",
+      }
+    );
+    observer.observe(ref.current);
+    // console.log(ref.current);
+    return () => observer.disconnect();
+  }, [isInteresting]);
+
+  useEffect(() => {
+    // console.log("im in the second useeffet");
+    if (isInteresting) {
+     ///  console.log("it's intersecting");
+      // console.log(ref.current);
+      ref.current.querySelectorAll(".project-leftSection").forEach((el) => {
+        el.classList.add("project-leftSection-animation");
+      });
+
+       ref.current.querySelectorAll(".project-rightSection").forEach((el) => {
+         el.classList.add("project-rightSection-animation");
+       });
+      ref.current
+        .querySelector(".section-title")
+        .classList.add("section-title-animation");
+    } else {
+       ref.current.querySelectorAll(".project-leftSection").forEach((el) => {
+         el.classList.remove("project-leftSection-animation");
+       });
+      ref.current.querySelectorAll(".project-rightSection").forEach((el) => {
+        el.classList.remove("project-rightSection-animation");
+      });
+      ref.current
+        .querySelector(".section-title")
+        .classList.remove("section-title-animation");
+    }
+  }, [isInteresting]);
   return (
     <div
       id="projects"
       className="container text-center vh-100 align-items-center projects"
     >
-      <div className="row vh-100 align-items-center justify-content-center">
-        <div className="row project">
-          <div className="col project-picture-section align-items-center">
-            <div className="row circle"></div>
-            <div className="row content jutify-content-between">
-              <div className="col content-text">
-                <h2>Cat lender</h2>
-                <p className="col">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-              </div>
-              <div className="col content-image">
-                <img
-                  className="sample-img"
-                  src="./imgs/cat-lender-03.png"
-                  alt="cat lender"
-                />
-
-                <a className="project-link" href="https://cat-lender.web.app/">
-                  <i className="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
-              </div>
+      <div className="row vh-100 justify-content-between flex-wrap" ref={ref}>
+        <h1
+          className="display-1 section-title"
+         
+        >
+          My Projects
+        </h1>
+        <div className="col project-leftSection">
+          <div className="row project-picture-section">
+            <div className="row preview-content">
+              <p className="preview-title">Cat-lender</p>
+              <p> A caring housekeeper for Your furry fiends' health</p>
             </div>
-            <img
-              className="row project-img"
-              src="./imgs/cat-lender-02.png"
-              alt="cat lender"
-            />
-            <img
-              className="row project-img-hover"
-              src="./imgs/cat-lender.png"
-              alt="cat lender"
-            />
-          </div>
-          {/* <div className="col project-picture-section">
-            <img
-              className="project-img"
-              src="./imgs/cat-lender.png"
-              alt="cat lender"
-            />
-            <div className="project-title">
-              <a href="https://cat-lender.web.app/">
-                <i className="fa-solid fa-arrow-up-right-from-square"></i>
+            <div className="row circle"></div>
+            <div className="row content">
+              <h2>Cat lender</h2>
+              <p className="col">
+                Cat-lender2.0 is a web react-redux web application dedicated to
+                assisting pets owner in managing their furry friends' health
+                conditions, schedules, and daily routines.
+              </p>
+              <a
+                className="btn btn-primary"
+                href="https://cat-lender.web.app/"
+                onClick={() => console.log("im clicking!")}
+              >
+                Check the Project
+              </a>
+              <a
+                className="btn btn-primary"
+                href="https://github.com/WenyiSun520/cat-lender2.0"
+                onClick={() => console.log("im clicking!")}
+              >
+                Check Github
               </a>
             </div>
+            <img
+              className="row project-img project-img-hover"
+              src="./imgs/orange-cat.png"
+              alt="cat lender"
+              style={{ height: "250px", width: "250px" }}
+            />
           </div>
-          <div className="col project-introduction">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum
+          <div className="row project-picture-section">
+            <div className="row preview-content">
+              <p className="preview-title">Tarots Today</p>
+              <p> Fun Application To Know Tarots Reading</p>
+            </div>
+            <div className="row circle"></div>
+            <div className="row content">
+              <h2>Tarots Today</h2>
+              <p className="col">
+                TarotsToday focus on daily Tarot Card reader that allows users
+                to see a card every day as well as add journal entries.
+              </p>
+
+              <a
+                className="btn btn-primary"
+                href="https://github.com/WenyiSun520/TarotsToday"
+                onClick={() => console.log("im clicking!")}
+              >
+                Check Github
+              </a>
+            </div>
+            <img
+              className="row project-img project-img-hover"
+              src="./imgs/tarots.png"
+              alt="Designed by stories / Freepik"
+              style={{ height: "250px", width: "250px" }}
+            />
           </div>
         </div>
-        <div className="row project">
-          <div className="col project-introduction">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum
-          </div>
-          <div className="col project-picture-section">
-            <img
-              className="project-img"
-              src="./imgs/tasj-management-system.jpg"
-              alt="Task Management System"
-            />
-            <div className="project-title">
-              <a href="https://shawk-solution-project.web.app/">
-                <i className="fa-solid fa-arrow-up-right-from-square"></i>
+        <div className="col project-rightSection">
+          <div className="row project-picture-section">
+            <div className="row preview-content">
+              <p className="preview-title">
+                Kaban Board Task Management System
+              </p>
+              <p> Effient Tool to help your team improve productivity</p>
+            </div>
+            <div className="row circle"></div>
+            <div className="row content">
+              <h2>Kaban Board Task Management System</h2>
+              <p className="col">
+                Kaban Board Task Management System inherite the idea of Agile
+                project management and majorly adapted the sprint board to
+                visualize, categorize, and list project tasks.
+              </p>
+              <a
+                className="btn btn-primary"
+                href="https://shawk-solution-project.web.app/login"
+                onClick={() => console.log("im clicking!")}
+              >
+                Check the Project
+              </a>
+
+              <a
+                className="btn btn-primary"
+                href="https://github.com/WenyiSun520/shawk-solution-task-management-system"
+                onClick={() => console.log("im clicking!")}
+              >
+                Check Github
               </a>
             </div>
-          </div> */}
+            <img
+              className="row project-img project-img-hover"
+              src="./imgs/kaban.png"
+              alt="Designed by stories / Freepik"
+              style={{ height: "250px", width: "250px" }}
+            />
+          </div>
+
+          <div className="row project-picture-section">
+            <div className="row preview-content">
+              <p className="preview-title">Other Works</p>
+              <p>
+                Small Projects aims to improve improve and sharpen my skills
+              </p>
+            </div>
+            <div className="row circle"></div>
+            <div className="row content">
+              <h2>Other Projects</h2>
+              <p className="col">
+                I also learned other framworks and skills in my free times, they
+                are small projects for practicing perpose.Check my Github Page
+                to see my learning and growth
+              </p>
+
+              <a
+                className="btn btn-primary"
+                href="https://github.com/WenyiSun520"
+                onClick={() => console.log("im clicking!")}
+              >
+                Check Github
+              </a>
+            </div>
+            <img
+              className="row project-img project-img-hover"
+              src="./imgs/otherProjects.png"
+              alt="Designed by stories / Freepik"
+              style={{ height: "250px", width: "300px" }}
+            />
+          </div>
         </div>
       </div>
     </div>

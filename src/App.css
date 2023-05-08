@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -11,11 +12,25 @@ html {
 .container {
   margin-bottom: 30%;
 }
+.display-1 {
+  font-family: "Pacifico", cursive;
+}
+
+.section-title {
+  background-color: burlywood;
+  border-radius: 40%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.section-title-animation {
+   animation: slideTop 1s ease forwards;
+}
 
 /* CSS for Navbar */
 .menu {
   position: sticky;
   top: 0px;
+  z-index: 10000;
 }
 .navbar-brand {
   animation: slideIn 1s ease forwards;
@@ -30,7 +45,6 @@ html {
 /* CSS for Main page */
 #id {
   height: 100vh;
-
 }
 
 .container.loading {
@@ -40,56 +54,34 @@ html {
   max-width: unset;
 }
 
-.greeting {
+.loading-background {
   position: relative;
-  color: white;
-  font-weight: 900;
-  font-size: 108px;
-}
-.greeting::before {
-  content: "Welcome";
-  position: absolute;
-  width: 2px;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: TextSwipe 2s linear forwards;
-}
-.loading-background{
-   position: relative;
-   background-image: url(../public/imgs/IMG_8678.png);
-   /* background-color: rosybrown; */
-   background-size: cover;
-   background-position: 50% 50%;
+  /* background-image: url(../public/imgs/IMG_8678.png); */
+  background-color: thistle;
+  background-size: cover;
+  background-position: 50% 50%;
   height: 80%;
-  font: 900 20rem "";
+  font: 900 3rem "";
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
   text-align: center;
-  overflow-y:scroll;
+  overflow-y: scroll;
   animation: shrink 2s ease forwards;
-
 }
-.loading-background::before{
-  content:"";
-  background-image: inherit;
-   /* background-color: rosybrown; */
-   background-size: cover;
-   background-position: 50% 50%;
-   position: absolute;
-   top:0;
-   left:0;
-   bottom: 0;
-   right:0;
-   z-index:-100;
-
+.loading-background::before {
+  content: "";
+  /* background-image: inherit; */
+   background-color: thistle;
+  background-size: cover;
+  background-position: 50% 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow-y: scroll;
 }
-.loading-main {
-  position:absolute;
-
-
-}
-
 .srollbar-loading {
   height: 5%;
   width: 100%;
@@ -103,8 +95,26 @@ html {
 }
 
 /* CSS FOR Introduction PAGE */
+.name-animation {
+  position: relative;
+  height: 100px;
+}
+.name-animation::before {
+  content: "Wenyi Sun";
+  position: absolute;
+  height: 120px;
+  left: 20px;
+  top: 0;
+  font-weight: 900;
+  font-size: 68px;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: TextSwipe 2s linear forwards;
+}
+
 .contact-animation {
   opacity: 0;
+  color: black;
   animation: slideBottom 1s ease forwards;
   animation-delay: calc(0.2s * var(--i));
 }
@@ -115,33 +125,42 @@ html {
   width: 300px;
   height: 400px;
   border-radius: 100%;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  z-index: -100;
   box-shadow: 20px 30px 20px 5px rgba(127, 129, 115, 0.6);
- 
-
 }
 .photo-card-photo-animation {
-  animation: zoomIn 2s ease forwards,MoveUpAndDown 2s ease infinite;
-   animation-delay: 0s, 3s;
+  animation: zoomIn 2s ease forwards, MoveUpAndDown 2s ease infinite;
+  animation-delay: 0s, 3s;
 }
 
 /* Project Page */
-#projects > row {
-  margin-top: 10%;
-}
+
 .project {
   padding-bottom: 20px;
+}
+.project-leftSection-animation {
+  animation: slideIn 2s ease forwards;
+}
+.project-rightSection-animation {
+  animation: slideLeftIn 2s ease forwards;
 }
 
 .project-picture-section {
   position: relative;
   width: 600px;
   height: 350px;
+  border-radius: 20px;
   transition: 0.5s;
-  border:1px solid #ddd;
-  overflow: auto;
+  /* border: 2px solid #ddd; */
+}
+.project-picture-section .preview-content {
+  z-index: 100;
+}
+.project-picture-section .preview-content .preview-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.project-picture-section:hover .preview-content {
+  display: none;
 }
 
 .project-picture-section .circle {
@@ -159,81 +178,96 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: aquamarine;
+  background-color: orange;
   border-radius: 20px;
-  clip-path: circle(150px at 100px 150px);
+  clip-path: circle(150px at center);
   transition: 1s;
 }
 .project-picture-section:hover .circle::before {
   clip-path: circle(500px at center);
-  background-color: cadetblue;
+  background-color: orange;
 }
-
-.project-picture-section .project-img {
-  position: absolute;
-  width: 180px;
-  height: 240px;
-  transform: translate(-10%, -50%);
-  overflow: hidden;
-}
-.project-picture-section .project-img-hover {
-  display: none;
-  transition: 1s;
-}
-.project-picture-section:hover .project-img{
-  display: none;
-}
-.project-picture-section:hover .project-img-hover{
-  display: block;
-  position: absolute;
-  width: 180px;
-  height: 240px;
-  /* transform: translate(300%, -40%) rotateZ(30deg);; */
-  transform: rotateX(30deg) rotateY(-20deg);
-  overflow: hidden;
-
-}
-.project-picture-section .content{
-  position: relative;
-
-
-}
-.project-picture-section .content .content-image{
-  display: none;
-}
-.project-picture-section:hover .content .content-image{
-  display: block;
-}
-.project-picture-section .content .sample-img {
-  opacity: 1;
-  display: block;
-  width: 100%;
-  height: 100%;
-  transition: 0.5s ease;
-  backface-visibility: hidden;
-}
-.project-link {
-  display: block;
+.project-img {
   position: absolute;
   top: 50%;
-  left:75%;
-    transform: translate(-50%, -50%);
+  left: 50%;
+  transform: translate(-50%, -40%);
+  transition: 0.5s;
+}
+.project-picture-section:hover .project-img {
+  left: 80%;
+  height: 600px;
+}
+.project-picture-section .content {
+  position: relative;
+  width: 50%;
+  transition: 0.5s;
+  visibility: hidden;
   opacity: 0;
-  transition: 0.5s ease;
 }
-.project-picture-section:hover .sample-img {
-  opacity: 0.3;
-}
-.project-picture-section:hover .project-link{
-  background-color: #ddd;
+.project-picture-section:hover .content {
+  visibility: visible;
   opacity: 1;
-} 
+}
 
-/* CSS for internship Page */
+/* CSS for experience Page */
 .timeline {
-  width: 10px;
+
+  position: relative;
+  width: 100%;
   height: 100%;
-  background-color: black;
+  margin: 0 auto;
+  margin-top:30px;
+  background-color: white;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: orange;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+  z-index: 50;
+}
+.single-experience {
+  /* border: 2px solid #ddd; */
+  position: relative;
+  opacity: 0;
+
+}
+.single-experience-animation {
+   animation: zoomIn 2s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+  
+}
+
+.single-experience .content {
+  width: 50%;
+  height: 200px;
+  border: 2px solid #ddd;
+}
+.single-experience .content .experience-time {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.right.single-experience .content {
+  position: relative;
+  transform: translate(105%, 0);
+}
+.left.single-experience .content .experience-time{
+  position: relative;
+  transform: translate(33%, 0);
+}
+
+.right.single-experience .content .experience-time{
+   position: relative;
+  transform: translate(-33%, 0);
+
+
 }
 
 @keyframes opacityChanged {
@@ -257,6 +291,15 @@ html {
 @keyframes slideIn {
   0% {
     transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideLeftIn {
+  0% {
+    transform: translateX(100%);
   }
   100% {
     transform: translateX(0);
@@ -317,8 +360,8 @@ html {
   }
 }
 
-@keyframes ShiftToTopRight{
-   0% {
+@keyframes ShiftToTopRight {
+  0% {
     left: 0;
   }
   50% {
@@ -326,14 +369,18 @@ html {
   }
 }
 
-@keyframes MoveUpAndDown{
-   0% {
+@keyframes MoveUpAndDown {
+  0% {
     transform: translateY(-2%);
   }
   50% {
-     transform: translateY(2%);
+    transform: translateY(2%);
   }
   100% {
-     transform: translateY(-2%);
+    transform: translateY(-2%);
   }
+}
+
+@keyframes identifier {
+  
 }

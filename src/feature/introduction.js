@@ -5,8 +5,6 @@ const Introduction = () => {
   const [isInteresting, setIsInteresting] = useState(false); //return true when ineraction occurs
   const ref = useRef(null);
 
-  
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -32,6 +30,7 @@ const Introduction = () => {
       ref.current
         .querySelector(".photo-card")
         .classList.add("photo-card-photo-animation");
+      ref.current.querySelector(".name").classList.add("name-animation");
     } else {
       // console.log("it's not intersecting");
       ref.current.querySelectorAll(".contact .col").forEach((el) => {
@@ -40,6 +39,7 @@ const Introduction = () => {
       ref.current
         .querySelector(".photo-card")
         .classList.remove("photo-card-photo-animation");
+       ref.current.querySelector(".name").classList.remove("name-animation");
     }
   }, [isInteresting]);
 
@@ -48,11 +48,12 @@ const Introduction = () => {
       <div className="row vh-100 align-items-center" ref={ref}>
         <div className="col personalInfo">
           <div className="row title">
-            <h1 className="display-1">Wenyi Sun</h1>
+            <h3>My name is</h3>
+            <h1 className="display-1 name "></h1>
             <h2>Software Developer</h2>
             <h2>UI/UX Designer</h2>
             <p>
-              My name is Wenyi Sun. I'm a motivated learner with a passion for
+              I'm a motivated learner with a passion for
               Software engineering and UI/UX design. Proficient in JAVA and
               React Programming. Passion for reaching out and would love to
               collaborate with people from diverse cultures and backgrounds.
@@ -87,12 +88,9 @@ const Introduction = () => {
             </a>
           </div>
         </div>
-        <div
-          id="card"
-          className="col photo-card"
-        >
+        <div id="card" className="col photo-card">
           <img
-            className="photo-card-photo img-responsive"
+            className="photo-card-photo img-responsive img-thumbnail"
             src="./imgs/profile.jpg"
             alt="profile"
           ></img>

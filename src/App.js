@@ -5,6 +5,7 @@ import Introduction from "./feature/introduction";
 import Project from "./feature/projects";
 import Experience from "./feature/experience";
 import Skill from "./feature/skill";
+import Footer from "./feature/footer";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Project />
       <Experience />
       <Skill />
+      <Footer />
     </div>
   );
 }
