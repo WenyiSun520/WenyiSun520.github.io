@@ -8,7 +8,42 @@ const Project = () => {
     >
       <div className="row vh-100 align-items-center justify-content-center">
         <div className="row project">
-          <div className="col project-picture-section">
+          <div className="col project-picture-section align-items-center">
+            <div className="row circle"></div>
+            <div className="row content jutify-content-between">
+              <div className="col content-text">
+                <h2>Cat lender</h2>
+                <p className="col">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+              </div>
+              <div className="col content-image">
+                <img
+                  className="sample-img"
+                  src="./imgs/cat-lender-03.png"
+                  alt="cat lender"
+                />
+
+                <a className="project-link" href="https://cat-lender.web.app/">
+                  <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </div>
+            <img
+              className="row project-img"
+              src="./imgs/cat-lender-02.png"
+              alt="cat lender"
+            />
+            <img
+              className="row project-img-hover"
+              src="./imgs/cat-lender.png"
+              alt="cat lender"
+            />
+          </div>
+          {/* <div className="col project-picture-section">
             <img
               className="project-img"
               src="./imgs/cat-lender.png"
@@ -51,7 +86,7 @@ const Project = () => {
                 <i className="fa-solid fa-arrow-up-right-from-square"></i>
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
