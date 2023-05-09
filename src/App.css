@@ -199,7 +199,7 @@ html {
   text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.6);
 }
 .fa-xmark {
-  display: block;
+  width:fit-content
 }
 
 
@@ -226,6 +226,12 @@ html {
   padding-top: 60px;
   width:500px;
 }
+
+
+.row.nav{
+  margin-left: 10px;
+}
+
 
 .sidenav a {
   text-decoration: none;

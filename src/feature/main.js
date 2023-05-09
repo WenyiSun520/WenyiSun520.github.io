@@ -24,27 +24,46 @@ const Main = () => {
 
         <div
           id="mySidenav"
-          className={`sidenav justify-content-end ${
+          className={`sidenav row justify-content-start ${
             toggleMenu ? "show-menu" : "no-menu"
           }`}
         >
-          <div className={`row float-start`} onClick={() => setToggleMenu((val) => !val)}>
+          <div
+            className={`x-mark row float-start`}
+            onClick={() => setToggleMenu((val) => !val)}
+          >
             <i
               className="fa-solid fa-xmark"
               // onClick={() => setToggleMenu((val) => !val)}
             ></i>
           </div>
-          <div className="row">
-            <a className="row" href="#">
+          <div className="row nav">
+            <a
+              className="row"
+              href="#intro"
+              onClick={() => setToggleMenu((val) => !val)}
+            >
               About Me
             </a>
-            <a className="row" href="#">
+            <a
+              className="row"
+              href="#projects"
+              onClick={() => setToggleMenu((val) => !val)}
+            >
               Projects
             </a>
-            <a className="row" href="#">
+            <a
+              className="row"
+              href="#experience"
+              onClick={() => setToggleMenu((val) => !val)}
+            >
               Internship
             </a>
-            <a className="row" href="#">
+            <a
+              className="row"
+              href="#skills"
+              onClick={() => setToggleMenu((val) => !val)}
+            >
               Skills
             </a>
           </div>
