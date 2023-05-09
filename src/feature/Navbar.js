@@ -29,20 +29,39 @@ const Navbar = () => {
       ref.current.querySelectorAll(".nav-link").forEach((el) => {
         el.classList.remove("nav-item-animation");
       });
-      ref.current
-        .querySelector("a")
-        .classList.remove("navbar-brand");
+      ref.current.querySelector("a").classList.remove("navbar-brand");
     }
   }, [isInteresting]);
 
+  const handleHomeBotton = (e) => {
+    e.preventDefault();
+    let btn = document.querySelector(".nav-name");
+    btn.classList.add("name-click-animation");
+    setTimeout(() => {
+      btn.classList.remove("name-click-animation");
+      let element = document.getElementById("home");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 600);
+  };
+
   return (
-    <div className="menu container-fluid ">
-      <nav className="navbar navbar-expand-lg navbar-light bg-light ">
-        <div className="collapse navbar-collapse" id="navbarScroll">
-          <ul className="navbar-nav me-auto my-2 my-lg-0" ref={ref}>
-            <a href="#home">
-              Wenyi Sun
-            </a>
+    <div className="menu row container-fluid ">
+      <nav className="col navbar navbar-expand-lg navbar-light bg-light ">
+        <div
+          className="collapse navbar-collapse justify-content-between"
+          id="navbarScroll"
+          ref={ref}
+        >
+          <a
+            href="#home"
+            className="nav-name"
+            onClick={(e) => handleHomeBotton(e)}
+          >
+            Wenyi Sun
+          </a>
+          <ul className="navbar-nav me-auto my-2 my-lg-0">
             <li className="nav-item" style={{ "--i": "1" }}>
               <span
                 className="nav-link"
@@ -77,6 +96,13 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
+        <a
+          className="btn col-1 cv-btn"
+          href="https://github.com/WenyiSun520/TarotsToday"
+          onClick={() => console.log("im clicking!")}
+        >
+          Download CV
+        </a>
       </nav>
     </div>
   );

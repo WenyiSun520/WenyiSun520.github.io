@@ -53,38 +53,37 @@ const Introduction = () => {
             <h2>Software Developer</h2>
             <h2>UI/UX Designer</h2>
             <p>
-              I'm a motivated learner with a passion for
-              Software engineering and UI/UX design. Proficient in JAVA and
-              React Programming. Passion for reaching out and would love to
-              collaborate with people from diverse cultures and backgrounds.
-              Positive and enthusiastic personality, team worker, and strong
-              communication skills.
+              I'm a motivated learner with a passion for Software engineering
+              and UI/UX design. Proficient in JAVA and React Programming.
+              Passion for reaching out and would love to collaborate with people
+              from diverse cultures and backgrounds. Positive and enthusiastic
+              personality, team worker, and strong communication skills.
             </p>
           </div>
           <div className="row contact">
             <a className="col" href="tel:4256150586" style={{ "--i": "1" }}>
-              <i className="col fa-solid fa-phone"></i>
+              <i className="col fa-solid fa-phone fa-xl"></i>
             </a>
             <a
               className="col"
               href="mailto:winnieee.sun@gmail.com"
               style={{ "--i": "2" }}
             >
-              <i className="fa-solid fa-at"></i>
+              <i className="fa-solid fa-at fa-xl"></i>
             </a>
             <a
               className="col"
               href="https://www.linkedin.com/in/wenyi-sun-519942195/"
               style={{ "--i": "3" }}
             >
-              <i className="fa-brands fa-linkedin-in"></i>
+              <i className="fa-brands fa-linkedin-in fa-xl"></i>
             </a>
             <a
               className="col"
               href="https://github.com/WenyiSun520"
               style={{ "--i": "4" }}
             >
-              <i className="fa-brands fa-github"></i>
+              <i className="fa-brands fa-github fa-xl"></i>
             </a>
           </div>
         </div>

@@ -20,7 +20,6 @@ const Experience = () => {
   }, [isInteresting]);
 
   useEffect(() => {
-    console.log("im in the second useeffet");
     if (isInteresting) {
       console.log("it's intersecting");
       console.log(ref.current)
@@ -31,7 +30,6 @@ const Experience = () => {
         .querySelector(".section-title")
         .classList.add("section-title-animation");
     } else {
-      console.log("it's not intersecting");
       ref.current.querySelectorAll(".single-experience").forEach((el) => {
         el.classList.remove("single-experience-animation");
       });
