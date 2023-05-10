@@ -49,9 +49,9 @@ const Project = () => {
   return (
     <div
       id="projects"
-      className="container text-center vh-100 align-items-center projects"
+      className="container text-center align-items-center projects"
     >
-      <div className="row vh-100 justify-content-between flex-wrap" ref={ref}>
+      <div className="row justify-content-between flex-wrap" ref={ref}>
         <h1 className="display-1 section-title">My Projects</h1>
         <div className="row project-picture-section project-leftSection ">
           <div className="row preview-content">
@@ -126,7 +126,7 @@ const Project = () => {
           <div className="row content">
             <h2>Kaban Board Task Management System</h2>
             <p className="col">
-              Kaban Board Task Management System inherite the idea of Agile
+              Kaban Board Task Management System is a MERN project inheriting the idea of Agile
               project management and majorly adapted the sprint board to
               visualize, categorize, and list project tasks.
             </p>

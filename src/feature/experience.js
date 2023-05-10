@@ -40,7 +40,7 @@ const Experience = () => {
   return (
     <div
       id="experience"
-      className="container text-center vh-100 align-items-center experience"
+      className="container text-center align-items-center experience"
       ref={ref}
     >
       <h1 className="display-1 section-title">My Experience</h1>

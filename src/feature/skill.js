@@ -4,11 +4,30 @@ const Skill = () => {
   return (
     <div id="skills" className="container text-center vh-100 skills">
       <div className="row vh-100 align-items-center justify-content-center">
-        <div className="row learning-journey">
-          <p>
-            In my learning journey of being a full-stack developer, I realized
-            that the key to growth and catch-in-pace in this area is to keep
-            self-learning.
+        <h1 className="display-1 section-title">My Skills</h1>
+
+        <div className="row learning-journey justify-content-center">
+          <div className="col-2">
+            <img
+              className="portrait"
+              src="./imgs/logo-2.png"
+              alt="self-protrait"
+            ></img>
+          </div>
+          <p className="col">
+            <span>In </span>my learning journey, I notice that the technology
+            industry is changing rapidly, and with the promotion of AI-driven
+            software such as chatGPT among the general public, I'm often worried
+            that my skills would be out of date and barely catch the latest
+            trend of technology. At the same time, I am also finding and
+            enjoying the joy of software development. To me, software
+            development is like carving a castle out of sand by the beach when I
+            was a kid, or making a figure out of clay. Programming language,
+            sand, and clay are all tools and materials. They depend on me to
+            apply my skills to create work. I cherish all the hard work that
+            goes into it. Still, I'm anxious about my position in the industry
+            and worried my skills are not strong enough, but I think, as long as
+            I keep learning, I will find my place.
           </p>
         </div>
         <div className="row my-skils">
