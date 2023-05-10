@@ -60,9 +60,9 @@ const Introduction = () => {
               personality, team worker, and strong communication skills.
             </p>
           </div>
-          <div className="row contact">
+          <div className="row contact align-items-center">
             <a className="col" href="tel:4256150586" style={{ "--i": "1" }}>
-              <i className="col fa-solid fa-phone fa-xl"></i>
+              <i className="fa-solid fa-phone fa-xl"></i>
             </a>
             <a
               className="col"
@@ -74,6 +74,8 @@ const Introduction = () => {
             <a
               className="col"
               href="https://www.linkedin.com/in/wenyi-sun-519942195/"
+              rel="noreferrer"
+              target="_blank"
               style={{ "--i": "3" }}
             >
               <i className="fa-brands fa-linkedin-in fa-xl"></i>
@@ -81,6 +83,8 @@ const Introduction = () => {
             <a
               className="col"
               href="https://github.com/WenyiSun520"
+              rel="noreferrer"
+              target="_blank"
               style={{ "--i": "4" }}
             >
               <i className="fa-brands fa-github fa-xl"></i>
@@ -89,7 +93,7 @@ const Introduction = () => {
         </div>
         <div id="card" className="col photo-card">
           <img
-            className="photo-card-photo img-responsive img-thumbnail"
+            className="photo-card-photo img-responsive"
             src="./imgs/profile.jpg"
             alt="profile"
           ></img>

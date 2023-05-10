@@ -44,17 +44,6 @@ html {
   animation: movement 5s linear infinite;
 }
 
-/* .App::after {
-  content: "";
-  display: block;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-} */
 .container {
   margin-bottom: 10%;
 }
@@ -141,11 +130,10 @@ html {
   padding: 0;
   margin: 0;
   width: 100vw;
-  /* background-color: #fbf37a; */
 }
 .menu .navbar {
   padding: 10px 20px;
-  /* background-color: #fbf37a; */
+  background-color: rgb(252, 194, 133) !important;
 }
 .navbar-brand {
   animation: slideIn 1s ease forwards;
@@ -199,6 +187,7 @@ html {
   padding-top: 30px;
   margin-left: 80%;
 }
+
 .fa-bars,
 .fa-xmark {
   font-size: 2em;
@@ -211,8 +200,7 @@ html {
 
 .show-menu {
   display: block;
-  width: 200px;
-  margin-right: 10px;
+  margin: 0;
 }
 .no-menu {
   display: none;
@@ -221,15 +209,20 @@ html {
 }
 
 .sidenav {
+  font-family: "Pacifico", cursive;
   height: 100%;
   position: fixed;
   z-index: 100;
-  background-color: transparent;
   overflow-x: hidden;
   transform: translateX(100%);
   transition: 0.5s;
   padding-top: 60px;
   width: 500px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .row.nav {
@@ -243,7 +236,15 @@ html {
   font-weight: 900;
   text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.6),
     0px 4px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  transition: all 2s;
 }
+
+.sidenav a:hover {
+  transform: translate(0%, -10%);
+  text-shadow: 20px 20px 1px rgba(240, 240, 240, 1);
+}
+
 .welcome {
   display: block;
   font-family: "Pacifico", cursive;
@@ -255,14 +256,12 @@ html {
   text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.6),
     0px 4px 4px rgba(0, 0, 0, 0.05);
   animation: zoomIn 2s ease forwards;
-  /* animation: TextSwipe 2s linear forwards; */
 }
 
 .srollbar-loading {
   position: absolute;
   height: 5%;
   width: 100%;
-  /* z-index: 1000; */
 }
 .fa-chevron-down {
   display: block;
@@ -310,6 +309,16 @@ html {
 .photo-card-photo-animation {
   animation: zoomIn 2s ease forwards, MoveUpAndDown 2s ease infinite;
   animation-delay: 0s, 3s;
+}
+.row.contact {
+  height: 50px;
+}
+.row.contact .col i {
+  transition: all 1s;
+}
+
+.row.contact .col i:hover {
+  transform: scale(1.5);
 }
 
 /* Project Page */
@@ -399,15 +408,17 @@ html {
 .timeline {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: fit-content;
   margin: 0 auto;
   margin-top: 30px;
+  margin-bottom: 10%;
 }
 
 .timeline::after {
   content: "";
   position: absolute;
   width: 6px;
+  height:100%;
   background-color: orange;
   top: 0;
   bottom: 0;
@@ -419,6 +430,7 @@ html {
   /* border: 2px solid #ddd; */
   position: relative;
   opacity: 0;
+  height: fit-content;
 }
 .single-experience-animation {
   animation: zoomIn 2s ease forwards;
@@ -427,27 +439,95 @@ html {
 
 .single-experience .content {
   width: 50%;
-  height: 200px;
-  border: 2px solid #ddd;
-  background-color: white;
+  height: fit-content;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 1s;
 }
+.left.single-experience .content:hover {
+  transform: translateX(-10%);
+}
+
 .single-experience .content .experience-time {
   font-size: 1.5rem;
   font-weight: 400;
+}
+.single-experience .content .experience-title {
+  font-size: 1.2rem;
+  font-weight: 900;
 }
 
 .right.single-experience .content {
   position: relative;
   transform: translate(105%, 0);
 }
+
+.right.single-experience .content:hover {
+  transform: translateX(120%);
+}
 .left.single-experience .content .experience-time {
   position: relative;
-  transform: translate(33%, 0);
+  transform: translate(30%, 0);
 }
 
 .right.single-experience .content .experience-time {
   position: relative;
-  transform: translate(-33%, 0);
+  transform: translate(-30%, 0);
+}
+
+/* CSS for skills Section */
+
+#footer {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  max-width: unset;
+  position: relative;
+  overflow-y: hidden;
+}
+#footer::after,
+#footer::before {
+  content: "";
+  position: absolute;
+  width: 250vw;
+  height: 250vh;
+  background-image: radial-gradient(
+    closest-side,
+    rgba(248, 54, 0, 1),
+    rgba(249, 212, 35, 0)
+  );
+  border-radius: 55%;
+  transform: translate(-50%, 200%) rotateZ(0);
+  top: 15vh;
+  animation: rotate 10s linear infinite;
+  margin-top: 80%;
+}
+#footer::after {
+  top: 10vh;
+  background-image: radial-gradient(
+    closest-side,
+    rgba(255, 195, 160, 1),
+    rgba(255, 175, 189, 0)
+  );
+
+  border-radius: 57%;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, 2%) rotateZ(0);
+  }
+
+  50% {
+    transform: translate(-45%, 0%) rotateZ(180deg);
+  }
+
+  100% {
+    transform: translate(-50%, 2%) rotateZ(360deg);
+  }
 }
 
 @keyframes opacityChanged {

@@ -48,7 +48,7 @@ const Navbar = () => {
 
   return (
     <div className="menu row container-fluid ">
-      <nav className="col navbar navbar-expand-lg navbar-light bg-light ">
+      <nav className="col navbar navbar-expand-lg bg-light">
         <div
           className="collapse navbar-collapse justify-content-between"
           id="navbarScroll"
@@ -98,8 +98,7 @@ const Navbar = () => {
         </div>
         <a
           className="btn col-1 cv-btn"
-          href="https://github.com/WenyiSun520/TarotsToday"
-          onClick={() => console.log("im clicking!")}
+          href="https://docs.google.com/document/d/e/2PACX-1vSlWHVADWXeY1Nxa5wkISaEEb5hOvQpzBPGX4QXDgcdEo37cKvtMFrhOAa-SL8XLA/pub"
         >
           Download CV
         </a>
