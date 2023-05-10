@@ -68,7 +68,7 @@ const Experience = () => {
             </p>
             <p>
               The internship at Shawk Solution is a precious experience. I have
-              experienced each step in project development such as investigating
+              experienced each step in project development including investigating
               marketing research, developing UI in Figma, and hard-coding on the
               project. With the guidance and help of my supervisor, I dive into
               each step with my skills and learn new skills from them.
