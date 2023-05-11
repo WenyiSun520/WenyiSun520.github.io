@@ -80,6 +80,15 @@ const Footer = () => {
           &#169; 2023 <i>By Wenyi Sun</i>
         </p>
       </div>
+      <div className="row rotate-square">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   );
 };

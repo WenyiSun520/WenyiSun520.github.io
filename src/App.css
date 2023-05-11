@@ -253,7 +253,7 @@ html {
   position: relative;
   width: 50px;
   height: 8px;
-  background: black;
+  background: var(--bg-color);
   border-radius: 5px;
   margin-bottom: 8px;
 }
@@ -662,41 +662,83 @@ html {
   position: relative;
   overflow-y: hidden;
 }
-#footer::after,
-#footer::before {
-  content: "";
-  position: absolute;
-  width: 250vw;
-  height: 250vh;
-  background-image: radial-gradient(
-    closest-side,
-    rgba(248, 54, 0, 1),
-    rgba(249, 212, 35, 0)
-  );
-  border-radius: 55%;
-  transform: translate(-50%, 100%) rotateZ(0);
-  top: 15vh;
-  animation: rotate 5s linear infinite;
-  margin-top: 80%;
-}
-#footer::after {
-  top: 10vh;
-  background-image: radial-gradient(
-    closest-side,
-    rgba(255, 195, 160, 1),
-    rgba(255, 175, 189, 0)
-  );
 
-  border-radius: 57%;
-}
 .footer-content {
   width: 300px;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
 }
-
 .contact .col i {
   color: black;
+}
+.rotate-square {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+
+.rotate-square span{
+  width:40px;
+  height:40px;
+  background-color: var(--dec-color);
+  position:absolute;
+  bottom:-160px;
+  animation: squareRotate 5s linear infinite;
+  border-radius: 10px;
+
+}
+.rotate-square span:nth-child(1),
+.rotate-square span:nth-child(7){
+  left:10%;
+}
+.rotate-square span:nth-child(7){
+  left:90%
+}
+.rotate-square span:nth-child(2),
+.rotate-square span:nth-child(6){
+  left:30%;
+  width: 80px;
+  height:80px;
+  opacity:0.3;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+.rotate-square span:nth-child(6){
+  left:80%
+}
+
+.rotate-square span:nth-child(3){
+  left:50%;
+  width: 55px;
+  height:55px;
+  opacity:0.8;
+  animation-duration: 8s;
+}
+
+.rotate-square span:nth-child(4){
+  left:60%;
+  width: 55px;
+  height:55px;
+  opacity:0.8;
+  animation-duration: 6s;
+}
+
+.rotate-square span:nth-child(5){
+  left:75%;
+  width: 55px;
+  height:55px;
+  opacity:0.6;
+  animation-duration: 4s;
+}
+
+@keyframes squareRotate {
+  0%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(-120vh) rotate(600deg);
+  }
+  
 }
 
 @keyframes rotate {
