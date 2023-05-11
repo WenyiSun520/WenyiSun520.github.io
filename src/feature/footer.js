@@ -23,9 +23,11 @@ const Footer = () => {
       });
     };
   return (
-    <div id="footer" className="container text-center vh-100 footer">
+    <div id="footer" className="container text-center footer">
       <div className="row flex-column vh-100 align-items-center justify-content-center">
-        <h1 className="display-1 section-title">Thank you, and let's connect!</h1>
+        <h1 className="display-1 section-title">
+          Thank you, and let's connect!
+        </h1>
         <div className="row align-items-center justify-content-center">
           <p
             className="footer-content"
@@ -37,9 +39,7 @@ const Footer = () => {
             opportunity to discuss my projects in greater detail with you. Hope
             we can have some conversation!
           </p>
-          <p>
-            &#169; 2023 <i>By Wenyi Sun</i>
-          </p>
+
           <div className="row contact align-items-center">
             <a className="col" href="tel:4256150586" style={{ "--i": "1" }}>
               <i className="fa-solid fa-phone fa-xl"></i>
@@ -71,6 +71,14 @@ const Footer = () => {
             </a>
           </div>
         </div>
+      </div>
+      <div className="row align-self-end">
+        <p>
+          Designed and developed <i>By Wenyi Sun</i>
+        </p>
+        <p>
+          &#169; 2023 <i>By Wenyi Sun</i>
+        </p>
       </div>
     </div>
   );

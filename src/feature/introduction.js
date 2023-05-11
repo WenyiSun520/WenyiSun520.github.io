@@ -1,14 +1,13 @@
-import React, { useState, useRef, useEffect} from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 const Introduction = () => {
-
   const [isInteresting, setIsInteresting] = useState(false); //return true when ineraction occurs
   const ref = useRef(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-       //  console.log("entry.isterwectiong: " + entry.isIntersecting);
+        //  console.log("entry.isterwectiong: " + entry.isIntersecting);
         setIsInteresting(entry.isIntersecting);
       },
       {
@@ -39,7 +38,7 @@ const Introduction = () => {
       ref.current
         .querySelector(".photo-card")
         .classList.remove("photo-card-photo-animation");
-       ref.current.querySelector(".name").classList.remove("name-animation");
+      ref.current.querySelector(".name").classList.remove("name-animation");
     }
   }, [isInteresting]);
 
@@ -49,12 +48,13 @@ const Introduction = () => {
         <div className="col personalInfo">
           <div className="row title">
             <h3>My name is</h3>
-            <h1 className="display-1 name "></h1>
+            <h1 className="display-1 name "> </h1>
             <h2>Software Developer</h2>
             <h2>UI/UX Designer</h2>
             <p>
-              I'm a motivated learner with a passion for Software engineering
-              and UI/UX design. Proficient in JAVA and React Programming.
+              I'm a <span className="bold-text"> motivated learner </span> with
+              a passion for Software engineering and UI/UX design. Proficient in
+              <span className="bold-text"> JAVA and React Programming </span>.
               Passion for reaching out and would love to collaborate with people
               from diverse cultures and backgrounds. Positive and enthusiastic
               personality, team worker, and strong communication skills.

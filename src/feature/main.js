@@ -1,8 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 const Main = () => {
-  const [toggleMenu, setToggleMenu] = useState(false);
-  console.log("toggleMenu: " + toggleMenu);
 
   const handleClickScroll = () => {
     //  console.log(id)
@@ -12,64 +10,60 @@ const Main = () => {
     }
   };
 
+  const toggleMenu = ()=>{
+    // let diyBtn = document.querySelector("#mySidenav")
+    // diyBtn.classList.toggle("sidenav-active");
+
+  }
+
   return (
     <div id="home" className="container vh-100 loading">
-      <div className="row loading-background text-center align-items-center justify-content-center">
-        <i
-          className={`fa-solid fa-bars row float-end ${
-            toggleMenu ? "no-menu" : "show-menu"
-          }`}
-          onClick={() => setToggleMenu((val) => !val)}
-        ></i>
+      <div className="row loading-background text-center">
+        <div className="diy-btn row d-flex flex-column " onClick={toggleMenu}>
+          <span className="btn-line btn-line-short"></span>
+          <span className="btn-line btn-line-long"></span>
+          <span className="btn-line btn-line-short align-self-end"></span>
+        </div>
 
-        <div
-          id="mySidenav"
-          className={`sidenav row justify-content-start ${
-            toggleMenu ? "show-menu" : "no-menu"
-          }`}
-        >
-          <div
-            className={`x-mark row float-start`}
-            onClick={() => setToggleMenu((val) => !val)}
-          >
-            <i
-              className="fa-solid fa-xmark"
-              // onClick={() => setToggleMenu((val) => !val)}
-            ></i>
-          </div>
-          <div className="row nav">
+        <div id="mySidenav" className="col sidenav">
+          <div className="row d-flex flex-column align-items-end">
             <a
               className="row"
               href="#intro"
-              onClick={() => setToggleMenu((val) => !val)}
+              style={{ "--i": "1" }}
+              onClick={toggleMenu}
             >
               About Me
             </a>
             <a
               className="row"
               href="#projects"
-              onClick={() => setToggleMenu((val) => !val)}
+              style={{ "--i": "2" }}
+              onClick={toggleMenu}
             >
               Projects
             </a>
             <a
               className="row"
               href="#experience"
-              onClick={() => setToggleMenu((val) => !val)}
+              style={{ "--i": "3" }}
+              onClick={toggleMenu}
             >
               Internship
             </a>
             <a
               className="row"
               href="#skills"
-              onClick={() => setToggleMenu((val) => !val)}
+              style={{ "--i": "4" }}
+              onClick={toggleMenu}
             >
               Skills
             </a>
           </div>
         </div>
-
-        <p className="row welcome">Welcome</p>
+        <div className="col-1">
+          <p className="col  welcome">Welcome</p>
+        </div>
 
         <div
           className="row align-self-end srollbar-loading "

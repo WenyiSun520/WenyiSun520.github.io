@@ -19,8 +19,6 @@ const Experience = () => {
 
   useEffect(() => {
     if (isInteresting) {
-      console.log("it's intersecting");
-      console.log(ref.current)
       ref.current.querySelectorAll(".single-experience").forEach((el) => {
         el.classList.add("single-experience-animation");
       });
@@ -68,10 +66,12 @@ const Experience = () => {
             </p>
             <p>
               The internship at Shawk Solution is a precious experience. I have
-              experienced each step in project development including investigating
-              marketing research, developing UI in Figma, and hard-coding on the
-              project. With the guidance and help of my supervisor, I dive into
-              each step with my skills and learn new skills from them.
+              experienced each step in
+              <span className="bold-text"> project development </span> including
+              investigating marketing research, developing UI in Figma, and
+              hard-coding on the project. With the guidance and help of my
+              supervisor, I dive into each step with my skills and learn new
+              skills from them.
             </p>
           </div>
         </div>
@@ -85,12 +85,14 @@ const Experience = () => {
             <p>
               Being an instructor at SMART coding school made me realize that
               it's always useful to review the skills I have and test if I can
-              understand them from a new perspective. During the teaching, the
-              concepts I thought were easy and quick to understand were absurd
-              to my students, and it may take some of them several days to fully
-              consume. This makes me realize that it's challenging to present a
-              concept from one perspective to the extent that every audience can
-              understand it at the same pace, and I have to go for another way.
+              understand them from a
+              <span className="bold-text"> new perspective </span>. During the
+              teaching, the concepts I thought were easy and quick to understand
+              were absurd to my students, and it may take some of them several
+              days to fully consume. This makes me realize that it's challenging
+              to present a concept from one perspective to the extent that every
+              audience can understand it at the same pace, and I have to go for
+              another way.
             </p>
           </div>
         </div>
@@ -102,7 +104,8 @@ const Experience = () => {
               Undergrand Reserch Assistant @UW Inform Public Center
             </p>
             <p>
-              This experience inspired me on experiencing competitive analysis
+              This experience inspired me on experiencing
+              <span className="bold-text"> competitive analysis </span>
               in project development. The research topic aimed to examine the
               motivation of TikTok users to spread debunking information about
               Covid-19. With the guidance of graduate and doctoral students, we
@@ -113,7 +116,8 @@ const Experience = () => {
               to investigate is crucial. Then from that one perspective, we can
               efficiently find another one and eventually construct a network.
               Of course, In this process of exploration, maintaining
-              communication with peers can be twice as effective.
+              <span className="bold-text"> communication </span> with peers can
+              be twice as effective.
             </p>
           </div>
         </div>

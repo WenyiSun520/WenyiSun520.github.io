@@ -11,8 +11,7 @@ html {
 }
 
 /* #root {
-  background-color: #fbf37a;
-} */
+overflow-x: hidden;} */
 
 .App {
   position: relative;
@@ -57,6 +56,10 @@ html {
   border-radius: 40%;
   transition: transform 0.6s;
   transform-style: preserve-3d;
+}
+
+.bold-text {
+  font-weight: 700;
 }
 .section-title-animation {
   animation: slideTop 1s ease forwards;
@@ -199,61 +202,78 @@ html {
   padding-top: 30px;
   margin-left: 80%;
 }
+/* CSS for DIY Btn in Main Page */
 
-.fa-bars,
-.fa-xmark {
-  font-size: 2em;
-  color: transparent;
-  text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.6);
-}
-.fa-xmark {
-  width: fit-content;
-}
-
-.show-menu {
-  display: block;
-  margin: 0;
-}
-.no-menu {
-  display: none;
-  width: fit-content;
+.diy-btn {
+  width: 50px;
+  padding: 0;
+  margin-top: 20px;
+  margin-left: 90%;
   height: fit-content;
+  transition: transform 0.3s;
+}
+.diy-btn .btn-line {
+  z-index: 2;
+  position: relative;
+  width: 50px;
+  height: 8px;
+  background: black;
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+.diy-btn .btn-line-short {
+  z-index: 1;
+  position: relative;
+  width: 30px;
+  height: 8px;
+  transition: 0.5s;
+}
+.diy-btn:hover .btn-line-long {
+  opacity: 0;
+}
+.diy-btn:hover .btn-line-short:nth-child(1) {
+  width: 50px;
+  transform: rotate(45deg);
+  transform-origin: left;
+  transition: 0.5s;
+}
+
+.diy-btn:hover .align-self-end {
+  width: 50px;
+  transform: rotate(-45deg);
+  transform-origin: left;
+  transition: 0.5s;
 }
 
 .sidenav {
-  font-family: "Pacifico", cursive;
+  position: absolute;
   height: 100%;
-  position: fixed;
-  z-index: 100;
-  overflow-x: hidden;
-  transform: translateX(100%);
-  transition: 0.5s;
-  padding-top: 60px;
-  width: 500px;
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 10px;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-
-.row.nav {
-  margin-left: 10px;
+  width: fit-content;
+  top: 10%;
+  right: 2%;
 }
 
 .sidenav a {
+  width: fit-content;
   text-decoration: none;
+  text-align: right;
   color: transparent;
   font-size: 5em;
   font-weight: 900;
   text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.6),
     0px 4px 4px rgba(0, 0, 0, 0.05);
   border-radius: 20px;
+  animation: slideLeftIn 2s ease forwards;
+   animation-delay: calc(0.2s * var(--i));
   transition: all 2s;
 }
 
+.row.nav {
+  margin-left: 10px;
+}
+
 .sidenav a:hover {
-  transform: translate(0%, -10%);
+  transform: translate(-10%, 10%);
   text-shadow: 20px 20px 1px rgba(240, 240, 240, 1);
 }
 
@@ -268,6 +288,7 @@ html {
   text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.6),
     0px 4px 4px rgba(0, 0, 0, 0.05);
   animation: zoomIn 2s ease forwards;
+  z-index: -100;
 }
 
 .srollbar-loading {
@@ -494,7 +515,7 @@ html {
   width: 200px;
   height: 200px;
 }
-.learning-journey p.col span {
+.learning-journey p.col .initial {
   font-family: "Pacifico", cursive;
   font-size: 2em;
   font-weight: 500;
@@ -521,7 +542,7 @@ html {
   transition: all 0.5s cubic-bezier(0.164, 0.84, 0.44, 1);
   overflow: hidden;
   border-radius: 10px;
-  background-color: transparent
+  background-color: transparent;
 }
 
 .skill-title {
