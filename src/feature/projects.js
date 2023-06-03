@@ -126,9 +126,9 @@ const Project = () => {
           <div className="row content">
             <h2>Kaban Board Task Management System</h2>
             <p className="col">
-              Kaban Board Task Management System is a MERN project inheriting the idea of Agile
-              project management and majorly adapted the sprint board to
-              visualize, categorize, and list project tasks.
+              Kaban Board Task Management System is a MERN project inheriting
+              the idea of Agile project management and majorly adapted the
+              sprint board to visualize, categorize, and list project tasks.
             </p>
             <a
               className="row btn"
@@ -163,9 +163,10 @@ const Project = () => {
           <div className="row content">
             <h2>Other Projects</h2>
             <p className="col">
-              I also learned other framworks and skills in my free times, they
-              are small projects for practicing perpose.Check my Github Page to
-              see my learning and growth
+              I also learned other framworks and skills in my free times such as
+              react-native, nextJs. Games built by JavsScipt such as Snake game,
+              tic-tac-toe. They are small projects for practicing perpose.Check
+              my Github Page to see my learning and growth
             </p>
 
             <a
