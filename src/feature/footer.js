@@ -1,27 +1,28 @@
 import React from "react";
+import contacts from "../constant/contacts";
 
 const Footer = () => {
-    const handleMouseMove = (e) => {
-      window.requestAnimationFrame(function () {
-        cardTransform(e.clientX, e.clientY);
-      });
-      function cardTransform(x, y) {
-        let card = document.querySelector(".section-title");
-        let box = card.getBoundingClientRect();
-        // console.log(box);
+  // const handleMouseMove = (e) => {
+  //   window.requestAnimationFrame(function () {
+  //     cardTransform(e.clientX, e.clientY);
+  //   });
+  //   function cardTransform(x, y) {
+  //     let card = document.querySelector(".section-title");
+  //     let box = card.getBoundingClientRect();
+  //     // console.log(box);
 
-        let calX = (y - box.y - box.width / 2) / 10;
-        let calY = ((x - box.x - box.height / 2) / 10) * -1;
-        // console.log(`rotateX(${calX}deg)`);
-        card.style.transform = `rotateX(${calX}deg) rotateY(${calY}deg)`;
-      }
-    };
-    const handleMouseLeave = (e) => {
-      window.requestAnimationFrame(function () {
-        let card = document.querySelector(".section-title");
-        card.style.transform = `rotateX(0deg) rotateY(0deg)`;
-      });
-    };
+  //     let calX = (y - box.y - box.width / 2) / 10;
+  //     let calY = ((x - box.x - box.height / 2) / 10) * -1;
+  //     // console.log(`rotateX(${calX}deg)`);
+  //     card.style.transform = `rotateX(${calX}deg) rotateY(${calY}deg)`;
+  //   }
+  // };
+  // const handleMouseLeave = (e) => {
+  //   window.requestAnimationFrame(function () {
+  //     let card = document.querySelector(".section-title");
+  //     card.style.transform = `rotateX(0deg) rotateY(0deg)`;
+  //   });
+  // };
   return (
     <div id="footer" className="container text-center footer">
       <div className="row flex-column vh-100 align-items-center justify-content-center">
@@ -31,8 +32,8 @@ const Footer = () => {
         <div className="row align-items-center justify-content-center">
           <p
             className="footer-content"
-            onMouseMove={(e) => handleMouseMove(e)}
-            onMouseLeave={(e) => handleMouseLeave(e)}
+            // onMouseMove={(e) => handleMouseMove(e)}
+            // onMouseLeave={(e) => handleMouseLeave(e)}
           >
             Thank you for taking the time to review my portfolio. I am very
             passionate about being a full-stack developer and I hope to have an
@@ -41,19 +42,23 @@ const Footer = () => {
           </p>
 
           <div className="row contact align-items-center">
-            <a className="col" href="tel:4256150586" style={{ "--i": "1" }}>
+            <a
+              className="col"
+              href={`tel:${contacts.phone}`}
+              style={{ "--i": "1" }}
+            >
               <i className="fa-solid fa-phone fa-xl"></i>
             </a>
             <a
               className="col"
-              href="mailto:winnieee.sun@gmail.com"
+              href={`mailto:${contacts.email}`}
               style={{ "--i": "2" }}
             >
               <i className="fa-solid fa-at fa-xl"></i>
             </a>
             <a
               className="col"
-              href="https://www.linkedin.com/in/wenyi-sun-519942195/"
+              href={contacts.linkedin}
               rel="noreferrer"
               target="_blank"
               style={{ "--i": "3" }}
@@ -62,7 +67,7 @@ const Footer = () => {
             </a>
             <a
               className="col"
-              href="https://github.com/WenyiSun520"
+              href={contacts.github}
               rel="noreferrer"
               target="_blank"
               style={{ "--i": "4" }}

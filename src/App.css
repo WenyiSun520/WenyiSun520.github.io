@@ -367,6 +367,7 @@ html {
   animation-delay: 0s, 3s;
 }
 .row.contact {
+  z-index: 999;
   height: 50px;
 }
 .row.contact .col i {
@@ -670,75 +671,73 @@ html {
   color: black;
 }
 .rotate-square {
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.rotate-square span{
-  width:40px;
-  height:40px;
+.rotate-square span {
+  width: 40px;
+  height: 40px;
   background-color: var(--dec-color);
-  position:absolute;
-  bottom:-160px;
+  position: absolute;
+  bottom: -160px;
   animation: squareRotate 5s linear infinite;
   border-radius: 10px;
-
 }
 .rotate-square span:nth-child(1),
-.rotate-square span:nth-child(7){
-  left:10%;
+.rotate-square span:nth-child(7) {
+  left: 10%;
 }
-.rotate-square span:nth-child(7){
-  left:90%
+.rotate-square span:nth-child(7) {
+  left: 90%;
 }
 .rotate-square span:nth-child(2),
-.rotate-square span:nth-child(6){
-  left:30%;
+.rotate-square span:nth-child(6) {
+  left: 30%;
   width: 80px;
-  height:80px;
-  opacity:0.3;
+  height: 80px;
+  opacity: 0.3;
   animation-delay: 2s;
   animation-duration: 12s;
 }
-.rotate-square span:nth-child(6){
-  left:80%
+.rotate-square span:nth-child(6) {
+  left: 80%;
 }
 
-.rotate-square span:nth-child(3){
-  left:50%;
+.rotate-square span:nth-child(3) {
+  left: 50%;
   width: 55px;
-  height:55px;
-  opacity:0.8;
+  height: 55px;
+  opacity: 0.8;
   animation-duration: 8s;
 }
 
-.rotate-square span:nth-child(4){
-  left:60%;
+.rotate-square span:nth-child(4) {
+  left: 60%;
   width: 55px;
-  height:55px;
-  opacity:0.8;
+  height: 55px;
+  opacity: 0.8;
   animation-duration: 6s;
 }
 
-.rotate-square span:nth-child(5){
-  left:75%;
+.rotate-square span:nth-child(5) {
+  left: 75%;
   width: 55px;
-  height:55px;
-  opacity:0.6;
+  height: 55px;
+  opacity: 0.6;
   animation-duration: 4s;
 }
 
 @keyframes squareRotate {
-  0%{
+  0% {
     transform: translateY(0);
   }
-  100%{
+  100% {
     transform: translateY(-120vh) rotate(600deg);
   }
-  
 }
 
 @keyframes rotate {

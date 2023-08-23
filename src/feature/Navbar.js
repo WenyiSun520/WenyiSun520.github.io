@@ -1,8 +1,7 @@
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
+import contacts from "../constant/contacts";
 
 const Navbar = () => {
-  const [isInteresting, setIsInteresting] = useState(false); //return true when ineraction occurs
-  const ref = useRef(null);
   const handleClickScroll = (id) => {
     //  console.log(id)
     let element = document.getElementById(id);
@@ -10,28 +9,6 @@ const Navbar = () => {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(([entry]) => {
-      setIsInteresting(entry.isIntersecting);
-    });
-    observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [isInteresting]);
-
-  useEffect(() => {
-    if (isInteresting) {
-      ref.current.querySelectorAll(".nav-link").forEach((el) => {
-        el.classList.add("nav-item-animation");
-      });
-      ref.current.querySelector("a").classList.add("navbar-brand");
-    } else {
-      ref.current.querySelectorAll(".nav-link").forEach((el) => {
-        el.classList.remove("nav-item-animation");
-      });
-      ref.current.querySelector("a").classList.remove("navbar-brand");
-    }
-  }, [isInteresting]);
 
   const handleHomeBotton = (e) => {
     e.preventDefault();
@@ -52,11 +29,10 @@ const Navbar = () => {
         <div
           className="collapse navbar-collapse justify-content-between"
           id="navbarScroll"
-          ref={ref}
         >
           <a
             href="#home"
-            className="nav-name"
+            className="nav-name navbar-brand"
             onClick={(e) => handleHomeBotton(e)}
           >
             Wenyi Sun
@@ -64,31 +40,32 @@ const Navbar = () => {
           <ul className="navbar-nav me-auto my-2 my-lg-0">
             <li className="nav-item" style={{ "--i": "1" }}>
               <span
-                className="nav-link"
+                className="nav-link nav-item-animation"
                 onClick={() => handleClickScroll("intro")}
               >
                 About Me
               </span>
             </li>
+            <li className="nav-item" style={{ "--i": "3" }}>
+              <span
+                className="nav-link nav-item-animation"
+                onClick={(e) => handleClickScroll("experience")}
+              >
+                Work Experience
+              </span>
+            </li>
             <li className="nav-item" style={{ "--i": "2" }}>
               <span
-                className="nav-link"
+                className="nav-link nav-item-animation"
                 onClick={(e) => handleClickScroll("projects")}
               >
                 Projects
               </span>
             </li>
-            <li className="nav-item" style={{ "--i": "3" }}>
-              <span
-                className="nav-link"
-                onClick={(e) => handleClickScroll("experience")}
-              >
-                Internship
-              </span>
-            </li>
+
             <li className="nav-item" style={{ "--i": "4" }}>
               <span
-                className="nav-link"
+                className="nav-link nav-item-animation"
                 onClick={(e) => handleClickScroll("skills")}
               >
                 Skills
@@ -96,10 +73,7 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <a
-          className="btn col-1 cv-btn"
-          href="https://docs.google.com/document/d/e/2PACX-1vSlWHVADWXeY1Nxa5wkISaEEb5hOvQpzBPGX4QXDgcdEo37cKvtMFrhOAa-SL8XLA/pub"
-        >
+        <a className="btn col-1 cv-btn" href={contacts.resume}>
           Download CV
         </a>
       </nav>
