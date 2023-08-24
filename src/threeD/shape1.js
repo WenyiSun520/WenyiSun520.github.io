@@ -7,6 +7,7 @@ const Shape1 = () => {
       <directionalLight position={[10, 10, 10]} />
       <Center rotation={[-0.5, -0.25, 0]}>
         <Text3D
+        color={["white","red","pink"]}
           curveSegments={32}
           bevelEnabled
           bevelSize={0.04}

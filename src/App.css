@@ -2,6 +2,7 @@
 * {
   padding: 0;
   margin: 0;
+ 
 }
 
 body,
@@ -759,6 +760,14 @@ html {
   height: 55px;
   opacity: 0.6;
   animation-duration: 4s;
+}
+
+.App{
+  cursor: url('cat.png'),auto;
+}
+a:hover, a:active{
+  cursor: url('cat.png'),auto;
+
 }
 
 @keyframes squareRotate {
