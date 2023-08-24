@@ -20,19 +20,14 @@ const Skill = () => {
   };
 
   const skills = skillText.skillSet.map((s) => (
-    <div className="col-1 single-skill-card">
+    <div className="col-1 single-skill-card" key={s.name}>
       <div className="skill-box">
         <p className="skill-title">{s.name}</p>
       </div>
       <div className="skill-hover">
         <p className="skill-title">{s.name}</p>
       </div>
-      <img
-        className="skill-logo"
-        src={s.src}
-        style={s.style}
-        alt={s.alt}
-      />
+      <img className="skill-logo" src={s.src} style={s.style} alt={s.alt} />
     </div>
   ));
 
@@ -48,11 +43,12 @@ const Skill = () => {
               alt="self-protrait"
             ></img>
           </div>
-          <p className="col" dangerouslySetInnerHTML={{__html: skillText.text}} />
+          <p
+            className="col"
+            dangerouslySetInnerHTML={{ __html: skillText.text }}
+          />
         </div>
-        <div className="row my-skils justify-content-center">
-        {skills}
-        </div>
+        <div className="row my-skils justify-content-center">{skills}</div>
       </div>
     </div>
   );

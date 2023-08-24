@@ -1,15 +1,9 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 const Main = () => {
-
   const [count, setCount] = useState(1);
   const setTheme = (theme) => (document.documentElement.className = theme);
-  let theme = [
-    "orange",
-    "purple",
-    "green",
-    "blue"
-  ];
+  let theme = ["orange", "purple", "green", "blue"];
 
   const handlePictureChanged = (e) => {
     e.preventDefault();
@@ -18,8 +12,8 @@ const Main = () => {
     } else {
       setCount((curr) => ++curr);
     }
-    setTheme(theme[count])
-    console.log(count)
+    setTheme(theme[count]);
+    console.log(count);
   };
 
   const handleClickScroll = () => {
@@ -29,7 +23,6 @@ const Main = () => {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
-
 
   return (
     <div id="home" className="container vh-100 loading">
@@ -48,11 +41,11 @@ const Main = () => {
             <a className="row" href="#intro" style={{ "--i": "1" }}>
               About Me
             </a>
+            <a className="row" href="#experience" style={{ "--i": "3" }}>
+              Experience
+            </a>
             <a className="row" href="#projects" style={{ "--i": "2" }}>
               Projects
-            </a>
-            <a className="row" href="#experience" style={{ "--i": "3" }}>
-              Internship
             </a>
             <a className="row" href="#skills" style={{ "--i": "4" }}>
               Skills

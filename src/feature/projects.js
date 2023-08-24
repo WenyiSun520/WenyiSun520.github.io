@@ -3,7 +3,7 @@ import projectText from "../constant/projectsText";
 
 const Project = () => {
   const projects = projectText.map((p) => (
-    <div className={`row project-picture-section ${p.section}`}>
+    <div className={`row project-picture-section ${p.section}`} key={p.title}>
       <div className="row preview-content">
         <p className="preview-title">{p.title}</p>
         <p>{p.preText}</p>
