@@ -63,8 +63,7 @@ const experienceText = [
     style: { "--i": "3" },
     reflection: ` Being an instructor at SMART coding school made me realize that
               it's always useful to review the skills I have and test if I can
-              understand them from a
-              <span className="bold-text"> new perspective </span>. During the
+              understand them from a new perspective. During the
               teaching, the concepts I thought were easy and quick to understand
               were absurd to my students, and it may take some of them several
               days to fully consume. This makes me realize that it's challenging
@@ -85,7 +84,7 @@ const experienceText = [
       alt: "junkipedia website image",
     },
     reflection: ` This experience inspired me on experiencing
-              <span className="bold-text"> competitive analysis </span>
+              competitive analysis
               in project development. The research topic aimed to examine the
               motivation of TikTok users to spread debunking information about
               Covid-19. With the guidance of graduate and doctoral students, we
@@ -96,9 +95,9 @@ const experienceText = [
               to investigate is crucial. Then from that one perspective, we can
               efficiently find another one and eventually construct a network.
               Of course, In this process of exploration, maintaining
-              <span className="bold-text"> communication </span> with peers can
+             communication with peers can
               be twice as effective.`,
-    link:""
+    link: "",
   },
 ];
 

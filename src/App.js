@@ -20,6 +20,7 @@ import Footer from "./feature/footer";
 function App() {
   return (
     <div className="App col">
+   
       <Main />
       <Navbar />
       <Introduction />

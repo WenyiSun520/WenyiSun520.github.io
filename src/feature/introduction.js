@@ -1,9 +1,17 @@
 import React from "react";
+import {
+  OrbitControls,
+  RenderTexture,
+  PerspectiveCamera,
+  Text,
+  Sphere,
+  MeshDistortMaterial,
+} from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
 import contacts from "../constant/contacts";
 import introduction from "../constant/introductionText";
 
 const Introduction = () => {
-
   return (
     <div id="intro" className="container text-center vh-100  main">
       <div className="row vh-100 align-items-center">
@@ -49,9 +57,23 @@ const Introduction = () => {
             </a>
           </div>
         </div>
-        <div id="card" className="col photo-card photo-card-photo-animation">
+        <div id="card" className="col">
+          <Canvas style={{ position: "absolute"}}>
+            {/* only threejs element inside of <Canvas></Canvas> */}
+            <OrbitControls enableZoom={false} autoRotate />
+            <ambientLight intensity={1} />
+            <directionalLight position={[3, 2, 1]} />
+            <Sphere args={[3, 100, 200]} scale={1}>
+              <MeshDistortMaterial
+                color="#FFF380"
+                attach="material"
+                distort={0.2}
+                speed={1}
+              />
+            </Sphere>
+          </Canvas>
           <img
-            className="photo-card-photo img-responsive"
+            className="photo-card-photo img-responsive photo-card photo-card-photo-animation"
             src="./imgs/profile.jpg"
             alt="profile"
           ></img>

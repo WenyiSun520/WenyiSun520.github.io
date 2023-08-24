@@ -61,7 +61,7 @@ html {
 .container {
   margin-bottom: 10%;
 }
-.display-1 {
+.display-1,.cubeText {
   font-family: "Pacifico", cursive;
 }
 
@@ -201,6 +201,7 @@ html {
 }
 .nav-item:hover {
   transform: translate(0%, -10%);
+  
 }
 .nav-item:active {
   transform: scale(0.9);
@@ -238,6 +239,7 @@ html {
   padding-top: 30px;
   margin-left: 80%;
 }
+
 /* CSS for DIY Btn in Main Page */
 
 .diy-btn {
@@ -293,7 +295,7 @@ html {
 
 .sidenav a:hover {
   transform: translate(-10%, 10%);
-  text-shadow: 20px 20px 1px rgba(240, 240, 240, 1);
+  text-shadow: 10px 10px 1px rgb(97, 78, 78);
 }
 
 .welcome {
@@ -305,14 +307,14 @@ html {
     0px 4px 4px rgba(0, 0, 0, 0.05);
   opacity: 0;
 }
-.welcome-1 {
+/* .welcome-1 {
   animation: zoomIn 2s ease forwards, welcome-1 2s ease forwards;
   animation-delay: 0s, 2s;
 }
 .welcome-2 {
   animation: zoomIn 2s ease forwards, welcome-2 1s ease forwards;
   animation-delay: 3s, 5s;
-}
+} */
 
 .srollbar-loading {
   position: absolute;
@@ -352,6 +354,10 @@ html {
   color: black;
   animation: slideBottom 1s ease forwards;
   animation-delay: calc(0.2s * var(--i));
+}
+#card {
+  position: relative;
+  height:600px;
 }
 .photo-card {
   transition: all 0.5s;
@@ -960,7 +966,7 @@ html {
   }
 }
 
-@keyframes welcome-1 {
+/* @keyframes welcome-1 {
   0% {
     transform: scale(1);
     opacity: 1;
@@ -979,4 +985,4 @@ html {
     transform: scale(1.2) translate(10%, 10%);
     opacity: 1;
   }
-}
+} */
