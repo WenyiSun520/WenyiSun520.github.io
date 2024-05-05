@@ -494,6 +494,7 @@ html {
 }
 .single-experience .content .back {
   position: absolute;
+  padding-top: 10px;
   width: 100%;
   height: 100%;
   border-radius: 10px;
@@ -502,6 +503,7 @@ html {
   -webkit-backdrop-filter: blur(50px);
   opacity: 0;
   transform: translate(0%, 100%);
+  overflow-y: scroll;
 }
 
 .single-experience .content:hover .back {
