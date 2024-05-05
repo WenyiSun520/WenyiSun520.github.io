@@ -36,7 +36,10 @@ const Skill = () => {
       <div className="row align-items-center justify-content-center">
         <h1 className="display-1 section-title">My Skills</h1>
         <div className="row learning-journey justify-content-center">
-          <div className="col-2" onClick={(e) => handlePictureChanged(e)}>
+          <div
+            className="col-12 col-sm-2 col-md-2"
+            onClick={(e) => handlePictureChanged(e)}
+          >
             <img
               className="portrait"
               src={pictures[count]}
@@ -44,7 +47,7 @@ const Skill = () => {
             ></img>
           </div>
           <p
-            className="col"
+            className="col-12 col-sm-10 col-md"
             dangerouslySetInnerHTML={{ __html: skillText.text }}
           />
         </div>

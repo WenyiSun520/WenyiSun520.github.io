@@ -58,8 +58,7 @@ const Introduction = () => {
           </div>
         </div>
         <div id="card" className="col">
-          <Canvas style={{ position: "absolute"}}>
-            {/* only threejs element inside of <Canvas></Canvas> */}
+          <Canvas className="threeJSCanvas" style={{ position: "absolute" }}>
             <OrbitControls enableZoom={false} autoRotate />
             <ambientLight intensity={1} />
             <directionalLight position={[3, 2, 1]} />

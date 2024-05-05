@@ -62,7 +62,7 @@ const Main = () => {
               </a>
             </div>
           </div>
-          <div className="col-6">
+          <div className="col-6 threeJSCanvas">
             {shapes[count-1]}
           </div>
           <div
@@ -84,7 +84,7 @@ const Main = () => {
           </div>
         </div>
       </div>
-      <canvas className="threeJSCanvas"></canvas>
+      {/* <canvas className="threeJSCanvas"></canvas> */}
     </>
   );
 };
