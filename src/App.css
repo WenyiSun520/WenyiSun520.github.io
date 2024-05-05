@@ -995,6 +995,11 @@ a:active {
 }
 /* CSS for screens narrower than 430px */
 @media (max-width: 470px) {
+ html, body {
+    overflow-x: hidden;
+}
+
+  
   #home {
     display: none;
   }
@@ -1004,5 +1009,8 @@ a:active {
   }
   #experience {
     margin-top: 100px;
+  }
+  .rotate-square{
+    display: none;
   }
 }
