@@ -3,4 +3,4 @@
 ## Update Portfolio
 
  > npm run build
- > nppm run deploy
+ > npm run deploy

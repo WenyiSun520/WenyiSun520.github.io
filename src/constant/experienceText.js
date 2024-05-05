@@ -1,5 +1,46 @@
 const experienceText = [
   {
+    title: "Full Stack Developer@Itlize",
+    time: "Sep.2023 - Present",
+    class: "left",
+    keywords: [
+      "Java 8+",
+      "Spring framework",
+      "AWS",
+      "Project management",
+      "Angular and React",
+      "Azure and SCRUM",
+    ],
+    style: { "--i": "6" },
+    img: {
+      src: "./imgs/itlize.jpeg",
+      style: { width: "300px", height: "250px" },
+      alt: "Lavner staff picture",
+    },
+    reflection: `As a full-stack consultant at Itlize, I help my clients build diverse applications across multiple disciplines. My tasks include but are not limited to building modern UI using Angular, implementing business logic with Java 8+ features, API design using Axios, Spring MVC, and Spring security, and deploying services on AWS using EC2, Lambda, and S3 Buckets.`,
+    link: ["https://github.com/WenyiSun520/korera"],
+  },
+  {
+    title: "Fullstack developer@MytsApp",
+    time: "Aug.2023 - Feb.2024",
+    class: "right",
+    keywords: [
+      "IOS Development",
+      "SwiftUI",
+      "Google Firebase",
+      "Project management",
+    ],
+    style: { "--i": "5" },
+    img: {
+      src: "./imgs/myts.png",
+      style: { width: "400px", height: "250px" },
+      alt: "Lavner staff picture",
+    },
+    reflection: `At Myts, we developed a social media application for college students to share their exciting moments on campus. The initial development team has 4 people. Each of us is responsible for a function from its UI to its API design. The database and authentication are hosted on Google Firebase. In this application, I was involved in all stages of the Software Development Life Cycle from prototype design on Figma to page implementation on Xcode using SwiftUI. Particularly, I'm responsible for the events pages including fetching, displaying, filtering posts, posting detail pages to display more detailed information, and fetching and displaying corresponding comments and photos. 
+`,
+    link: ["https://apps.apple.com/us/app/myts-my-timestamps/id6475708089"],
+  },
+  {
     title: "IT Intern @Lavner Education",
     time: "Jun.2023 - Aug.2023",
     class: "left",
@@ -10,7 +51,7 @@ const experienceText = [
       "Project management",
       "Supportive",
     ],
-    style: { "--i": "1" },
+    style: { "--i": "4" },
     img: {
       src: "./imgs/lavner_staff.jpg",
       style: { width: "400px", height: "250px" },
@@ -34,7 +75,7 @@ const experienceText = [
       style: { width: "450px", height: "250px" },
       alt: "shawk app screenshot",
     },
-    style: { "--i": "2" },
+    style: { "--i": "3" },
     reflection: ` At Shawk Solution,  I had an opportunity to independently design
      a product from the ground up. This project highlighted my project management skills.
       I adopted a structured approach, creating task lists every week and assigning each week's 
@@ -60,7 +101,7 @@ const experienceText = [
       style: { width: "400px", height: "200px" },
       alt: "smartcodingschool logo",
     },
-    style: { "--i": "3" },
+    style: { "--i": "2" },
     reflection: ` Being an instructor at SMART coding school made me realize that
               it's always useful to review the skills I have and test if I can
               understand them from a new perspective. During the
@@ -77,7 +118,7 @@ const experienceText = [
     time: "Sep.2021 - Mar.2022",
     class: "right",
     keywords: ["data cleanning", "research methods"],
-    style: { "--i": "4" },
+    style: { "--i": "1" },
     img: {
       src: "./imgs/uwInformed.png",
       style: { width: "400px", height: "250px" },

@@ -80,6 +80,7 @@ const Footer = () => {
       <div className="row align-self-end">
         <p>
           Designed and developed <i>By Wenyi Sun</i>
+          <br></br>Last Update: 05/04/2024
         </p>
         <p>
           &#169; 2023 <i>By Wenyi Sun</i>

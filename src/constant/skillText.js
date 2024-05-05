@@ -46,10 +46,10 @@ const skillText = {
       alt: "Redux Logo",
     },
     {
-      name: "NEXT",
-      src: "./imgs/nextjs.png",
-      style: { width: "90px", height: "30px" },
-      alt: "NEXT Logo",
+      name: "Angular",
+      src: "./imgs/angular.png",
+      style: { width: "60px", height: "60px" },
+      alt: "Angular Logo",
     },
     {
       name: "NodeJS",
@@ -82,10 +82,10 @@ const skillText = {
       alt: "D3JS Logo",
     },
     {
-      name: "Tableau",
-      src: "./imgs/tableau.jpg",
+      name: "AWS",
+      src: "./imgs/aws.png",
       style: { width: "50px", height: "50px" },
-      alt: "Tableau Logo",
+      alt: "AWS Logo",
     },
   ],
 };

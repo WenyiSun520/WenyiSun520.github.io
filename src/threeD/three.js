@@ -3,7 +3,6 @@ import {
   RenderTexture,
   PerspectiveCamera,
   Text,
-  Center
 } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import React, { useRef } from "react";
@@ -41,8 +40,7 @@ const Cube = () => {
               ref={textRef}
               fontSize={2}
               color="#555"
-              font={"/Pacifico_Regular.json"}
-            >
+                          >
               Hello
             </Text>
    
