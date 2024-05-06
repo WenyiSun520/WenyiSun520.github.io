@@ -400,6 +400,7 @@ html {
   position: relative;
   width: 600px;
   height: 350px;
+  margin: 20px;
   border-radius: 20px;
   transition: 0.5s;
 }
@@ -452,9 +453,11 @@ html {
 .project-picture-section .content {
   position: relative;
   width: 60%;
+  height:inherit;
   transition: 0.5s;
   visibility: hidden;
   opacity: 0;
+  overflow-y: scroll;
 }
 .project-picture-section:hover .content {
   visibility: visible;
@@ -468,12 +471,15 @@ html {
 }
 
 /* CSS for experience Page */
-
+.row.timeline {
+  margin-left: 10px;
+}
 .single-experience {
   /* border: 2px solid #ddd; */
   position: relative;
   opacity: 0;
   height: fit-content;
+  margin-left: 10px;
   margin: 20px;
 }
 .single-experience-animation {
@@ -995,11 +1001,11 @@ a:active {
 }
 /* CSS for screens narrower than 430px */
 @media (max-width: 470px) {
- html, body {
+  html,
+  body {
     overflow-x: hidden;
-}
+  }
 
-  
   #home {
     display: none;
   }
@@ -1010,7 +1016,7 @@ a:active {
   #experience {
     margin-top: 100px;
   }
-  .rotate-square{
+  .rotate-square {
     display: none;
   }
 }

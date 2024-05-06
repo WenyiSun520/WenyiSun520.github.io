@@ -2,7 +2,6 @@ import React from "react";
 import experienceText from "../constant/experienceText";
 
 const Experience = () => {
-
   const experiences = experienceText.map((e) => (
     <div
       className={`row ${e.class} single-experience single-experience-animation`}
@@ -21,7 +20,7 @@ const Experience = () => {
         <p className="experience-keywords">
           {e.keywords.map((key) => key).join(", ")}
         </p>
-        <div className="row back">
+        <div className="row back flex-wrap">
           {e.reflection}
           {e.link !== ""
             ? e.link.map((l) => (
@@ -42,18 +41,12 @@ const Experience = () => {
     </div>
   ));
 
-
   return (
-    <div
-      id="experience"
-      className="container text-center align-items-center experience"
-    >
+    <div id="experience" className="container text-center  experience">
       <h1 className="display-1 section-title section-title-animation">
         My Experience
       </h1>
-      <div className="row align-items-center justify-content-center timeline">
-        {experiences}
-      </div>
+      <div className="row justify-content-center timeline">{experiences}</div>
     </div>
   );
 };
