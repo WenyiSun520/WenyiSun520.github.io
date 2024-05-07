@@ -24,7 +24,7 @@ const Footer = () => {
   //   });
   // };
   return (
-    <div id="footer" className="container text-center footer">
+    <div id="footer" className="container text-center footer flex-1">
       <div className="row flex-column vh-100 align-items-center justify-content-center">
         <h1 className="display-1 section-title">
           Thank you, and let's connect!

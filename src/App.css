@@ -4,12 +4,22 @@
   margin: 0;
 }
 
-body,
+/* body,
 html {
   width: 100vw;
   height: 100vh;
+  overflow-x:visible;
+} */
+#root {
+  height: 100vh;
+  overflow: hidden; /* Hide the scrollbar */
 }
-
+.App{
+  height: 100%;
+  overflow-y: auto; /* Allow vertical scrolling */
+  overflow-x:hidden;
+  box-sizing: content-box; /* Include padding in the total height */
+}
 :root,
 :root.orange {
   --bg-color: rgb(252, 194, 133);
@@ -729,7 +739,7 @@ html {
   opacity: 0.6;
   animation-duration: 4s;
 }
-
+/* CSS For cursor animation */
 .App {
   cursor: url("cat.png"), auto;
 }
@@ -945,7 +955,12 @@ a:active {
 /* CSS for Experience section when screens narrower than 430px */
 @media (min-width: 1220px) {
   .single-experience .content {
-    width: 50%;
+    width: 600px;
+    overflow-y:unset;
+  }
+  .single-experience .content .back,
+   .project-picture-section .row.content{
+    overflow: hidden;
   }
   .timeline {
     position: relative;
@@ -969,17 +984,21 @@ a:active {
     z-index: 50;
   }
 
+  .left.single-experience .content {
+    position: relative;
+    transform: translate(15%, 0);
+  }
   .left.single-experience .content:hover {
-    transform: translateX(-10%);
+    transform: translateX(5%);
   }
 
   .right.single-experience .content {
     position: relative;
-    transform: translate(105%, 0);
+    transform: translate(130%, 0);
   }
 
   .right.single-experience .content:hover {
-    transform: translateX(120%);
+    transform: translateX(140%);
   }
   .left.single-experience .content .experience-time {
     position: relative;
@@ -990,6 +1009,7 @@ a:active {
     position: relative;
     transform: translate(-30%, 0);
   }
+ 
 }
 @media (max-width: 767px) {
   .threeJSCanvas {

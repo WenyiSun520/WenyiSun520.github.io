@@ -8,6 +8,9 @@ import Experience from "./feature/experience";
 import Skill from "./feature/skill";
 import Footer from "./feature/footer";
 
+
+
+
 // const Navbar = React.lazy(() => import("./feature/Navbar"));
 // const Main = React.lazy(() => import("./feature/main"));
 // const Introduction = React.lazy(() => import("./feature/introduction"));
@@ -18,16 +21,16 @@ import Footer from "./feature/footer";
 // const Footer = React.lazy(() => import("./feature/footer"));
 
 function App() {
+
   return (
-    <div className="App col">
-   
+    <div className="App row">
       <Main />
       <Navbar />
       <Introduction />
       <Experience />
       <Project />
       <Skill />
-      <Footer />
+      <Footer/>
     </div>
   );
 }
