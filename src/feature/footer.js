@@ -1,30 +1,24 @@
-import React from "react";
+import React,{useState} from "react";
 import contacts from "../constant/contacts";
+import GreetingAvatar from "../threeD/greetingAvatar";
 
 const Footer = () => {
-  // const handleMouseMove = (e) => {
-  //   window.requestAnimationFrame(function () {
-  //     cardTransform(e.clientX, e.clientY);
-  //   });
-  //   function cardTransform(x, y) {
-  //     let card = document.querySelector(".section-title");
-  //     let box = card.getBoundingClientRect();
-  //     // console.log(box);
+  const [animate,setAnimate] = useState(0);
 
-  //     let calX = (y - box.y - box.width / 2) / 10;
-  //     let calY = ((x - box.x - box.height / 2) / 10) * -1;
-  //     // console.log(`rotateX(${calX}deg)`);
-  //     card.style.transform = `rotateX(${calX}deg) rotateY(${calY}deg)`;
-  //   }
-  // };
-  // const handleMouseLeave = (e) => {
-  //   window.requestAnimationFrame(function () {
-  //     let card = document.querySelector(".section-title");
-  //     card.style.transform = `rotateX(0deg) rotateY(0deg)`;
-  //   });
-  // };
+  const changeAnimation = () => {
+    if(animate === 4){
+      setAnimate(0);
+    }else{
+
+      setAnimate(animate+1);
+    }
+  }
   return (
     <div id="footer" className="container text-center footer flex-1">
+      <div className="greetingAvatar" style={{"zIndex":999}} onClick={changeAnimation}>
+        <GreetingAvatar animate={animate}/>
+      </div>
+
       <div className="row flex-column vh-100 align-items-center justify-content-center">
         <h1 className="display-1 section-title">
           Thank you, and let's connect!
@@ -77,6 +71,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
       <div className="row align-self-end">
         <p>
           Designed and developed <i>By Wenyi Sun</i>

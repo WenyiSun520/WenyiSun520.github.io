@@ -7,6 +7,7 @@ import Project from "./feature/projects";
 import Experience from "./feature/experience";
 import Skill from "./feature/skill";
 import Footer from "./feature/footer";
+import GreetingAvatar from "./threeD/greetingAvatar";
 
 
 
@@ -24,6 +25,12 @@ function App() {
 
   return (
     <div className="App row">
+      {/* <div
+        className="greetingAvatar"
+        style={{ zIndex: 999 }}
+      >
+        <GreetingAvatar />
+      </div> */}
       <Main />
       <Navbar />
       <Introduction />

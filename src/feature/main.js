@@ -2,9 +2,7 @@ import React, { useState, useEffect } from "react";
 import Three from "../threeD/three.js";
 import Shape1 from "../threeD/shape1.js";
 import Shape2 from "../threeD/shape2.js";
-import Avatar from "../threeD/avatar.jsx";
-
-
+import Avatar from "../threeD/codingAvatar.jsx";
 
 
 const Main = () => {
@@ -64,10 +62,9 @@ const Main = () => {
               </a>
             </div>
           </div>
-          <div className="col-6 threeJSCanvas">
-            {/* {shapes[count - 1]} */}
+          <div className="col-8 threeJSCanvas">
+             {/* {shapes[count - 1]}  */}
             <Avatar />
-            {/* <Model /> */}
           </div>
           <div
             className="row align-self-end srollbar-loading "

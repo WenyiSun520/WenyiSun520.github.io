@@ -664,6 +664,7 @@ html {
 
 /* CSS for Footer Section */
 
+
 #footer {
   width: 100%;
   margin-left: 0;
@@ -671,6 +672,13 @@ html {
   max-width: unset;
   position: relative;
   overflow-y: hidden;
+}
+
+.greetingAvatar{
+  position: absolute;
+  transform: translate(240%,10%) ;
+ 
+ 
 }
 
 .footer-content {
