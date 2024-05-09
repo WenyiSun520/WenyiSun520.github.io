@@ -675,8 +675,9 @@ html {
 }
 
 .greetingAvatar{
-  position: absolute;
-  transform: translate(240%,10%) ;
+  display: none;
+  /* position: absolute;
+  transform: translate(240%,10%) ; */
  
  
 }
@@ -1017,6 +1018,14 @@ a:active {
     position: relative;
     transform: translate(-30%, 0);
   }
+
+  .greetingAvatar{
+  display: block;
+  position: absolute;
+  transform: translate(365%,10%) ;
+ 
+ 
+}
  
 }
 @media (max-width: 767px) {

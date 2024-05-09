@@ -42,7 +42,7 @@ export default function GreetingAvatar() {
   }
   
   return (
-   <Canvas camera={{ position: [.3, 1, 1.08] }}  style={{ width: "30vw", height: "150vh" }} onClick={startAnimation}>
+   <Canvas camera={{ position: [.3, 1, 1.08] }}  style={{ width: "20vw", height: "150vh" }} onClick={startAnimation}>
       <directionalLight
         position={[1, 3.0, 4.4]}
         castShadow
