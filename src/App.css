@@ -961,7 +961,7 @@ a:active {
       -20vmax -40vmax, 60vmax 60vmax;
   }
 }
-/* CSS for Experience section when screens narrower than 430px */
+/* CSS for Experience section when screens wider than 1220px */
 @media (min-width: 1220px) {
   .single-experience .content {
     width: 600px;
@@ -994,20 +994,23 @@ a:active {
   }
 
   .left.single-experience .content {
-    position: relative;
-    transform: translate(15%, 0);
+  left:5%;
+    /* position: relative;
+    transform: translate(100%, 0); */
   }
   .left.single-experience .content:hover {
     transform: translateX(5%);
   }
 
   .right.single-experience .content {
-    position: relative;
-    transform: translate(130%, 0);
+    
+    left: 60%;
+    /* position: relative;
+    transform: translate(130%, 0); */
   }
 
   .right.single-experience .content:hover {
-    transform: translateX(140%);
+    transform: translateX(5%);
   }
   .left.single-experience .content .experience-time {
     position: relative;
